@@ -1,0 +1,12 @@
+Check Point 1 - Microservices and Web Engineering
+2o semestre / 2026 - Prof. Antonio Carlos de Lima Junior
+
+URL do repositorio no GitHub:
+https://github.com/MuriloMercadante/PokemonApiCp2
+
+URL do repositorio no Docker Hub:
+https://hub.docker.com/r/murilomercadante/pokemonapicp2
+
+Integrantes do grupo:
+- Murilo Mercadante - RM555926
+- Jaime Luiz T. Silva - RM555051
