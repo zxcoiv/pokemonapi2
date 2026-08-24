@@ -4,8 +4,8 @@ API REST desenvolvida em **Spring Boot** para cadastro de pokemons e de seus niv
 
 Check Point 1 — *Microservices and Web Engineering* — Prof. Antonio Carlos de Lima Junior.
 
-- Repositorio GitHub: https://github.com/MuriloMercadante/PokemonApiCp2
-- Repositorio Docker Hub: https://hub.docker.com/r/murilomercadante/pokemonapicp2
+- Repositorio GitHub: https://github.com/zxcoiv/pokemonapi2
+- Repositorio Docker Hub: https://hub.docker.com/r/zxcoiv/pokemonapi2
 
 ---
 
@@ -92,19 +92,19 @@ http://localhost:8080
 ### 1. Baixar a imagem do Docker Hub
 
 ```sh
-docker pull murilomercadante/pokemonapicp2:1.0.0
+docker pull zxcoiv/pokemonapi2:1.0.0
 ```
 
 Tambem esta disponivel a tag `latest`:
 
 ```sh
-docker pull murilomercadante/pokemonapicp2:latest
+docker pull zxcoiv/pokemonapi2:latest
 ```
 
 Ou, para gerar a imagem localmente a partir do codigo-fonte:
 
 ```sh
-docker build -t pokemonapicp2:1.0.0 .
+docker build -t pokemonapi2:1.0.0 .
 ```
 
 ### 2. Executar o container
@@ -121,7 +121,7 @@ docker run -d \
   -e DB_USER=root \
   -e DB_PWD=root_pwd \
   -e SPRING_PROFILES_ACTIVE=default \
-  murilomercadante/pokemonapicp2:1.0.0
+  zxcoiv/pokemonapi2:1.0.0
 ```
 
 No Windows PowerShell:
@@ -136,7 +136,7 @@ docker run -d `
   -e DB_USER=root `
   -e DB_PWD=root_pwd `
   -e SPRING_PROFILES_ACTIVE=default `
-  murilomercadante/pokemonapicp2:1.0.0
+  zxcoiv/pokemonapi2:1.0.0
 ```
 
 A aplicacao ficara disponivel em:
@@ -196,7 +196,7 @@ docker run -d \
   -e DB_SCHEMA=pokemondb \
   -e DB_USER=root \
   -e DB_PWD=root_pwd \
-  murilomercadante/pokemonapicp2:1.0.0
+  zxcoiv/pokemonapi2:1.0.0
 ```
 
 #### Criando o schema para o profile `prd`
@@ -282,7 +282,7 @@ http://localhost:8080/v3/api-docs
 ### Criar a imagem
 
 ```sh
-docker build -t pokemonapicp2:1.0.0 .
+docker build -t pokemonapi2:1.0.0 .
 ```
 
 ### Executar o container
@@ -297,15 +297,15 @@ docker run -d \
   -e DB_USER=root \
   -e DB_PWD=root_pwd \
   -e SPRING_PROFILES_ACTIVE=default \
-  pokemonapicp2:1.0.0
+  pokemonapi2:1.0.0
 ```
 
 ### Publicar no Docker Hub
 
 ```sh
 docker login
-docker tag pokemonapicp2:1.0.0 murilomercadante/pokemonapicp2:1.0.0
-docker push murilomercadante/pokemonapicp2:1.0.0
+docker tag pokemonapi2:1.0.0 zxcoiv/pokemonapi2:1.0.0
+docker push zxcoiv/pokemonapi2:1.0.0
 ```
 
 ### Listar containers em execucao
