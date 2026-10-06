@@ -1,7 +1,3 @@
-# 🐉 Pokémon API — Check Point 2
-
-API REST em **Java + Spring Boot** para cadastro de pokémons e de seus níveis, com persistência em **SQL Server** via **Spring Data JPA**, documentação **Swagger/OpenAPI**, configuração por **profiles** e execução com **Docker**.
-
 > *Microservices and Web Engineering* — Prof. Antonio Carlos de Lima Júnior
 
 | | |
