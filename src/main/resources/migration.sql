@@ -1,29 +1,18 @@
--- Script de criacao manual do schema para o profile prd.
--- No profile prd a aplicacao NAO cria banco nem tabelas (ddl-auto=none),
--- portanto este script deve ser aplicado manualmente antes de subir o container.
---
--- Uso:
---   docker exec -i <container_mysql> mysql -uroot -p<senha> < src/main/resources/migration.sql
---   ou: mysql -h <host> -P <porta> -u <usuario> -p < src/main/resources/migration.sql
-
-create database if not exists pokemondb;
-
-use pokemondb;
-
-create table pokemons (
-    id bigint not null,
-    nome_pokemon char(24) not null,
-    tipo varchar(255) not null,
-    tipo_secundario varchar(255),
-    descricao varchar(255) not null,
-    primary key (id)
-) engine = InnoDB;
-
-create table niveis (
-    id bigint not null,
-    nivel_pokemon integer not null,
-    nome_treinador varchar(255) not null,
-    estagio integer not null,
-    onde_encontrar varchar(255) not null,
-    primary key (id)
-) engine = InnoDB;
+IF DB_ID('api') IS NULL CREATE DATABASE api;
+GO
+USE api;
+GO
+CREATE TABLE pokemons (
+                          id BIGINT NOT NULL PRIMARY KEY,
+                          nome_pokemon CHAR(24) NOT NULL,
+                          tipo VARCHAR(255) NOT NULL,
+                          tipo_secundario VARCHAR(255),
+                          descricao VARCHAR(255) NOT NULL
+);
+CREATE TABLE niveis (
+                        id BIGINT NOT NULL PRIMARY KEY,
+                        nivel_pokemon INT NOT NULL,
+                        nome_treinador VARCHAR(255) NOT NULL,
+                        estagio INT NOT NULL,
+                        onde_encontrar VARCHAR(255) NOT NULL
+);
